@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() => runApp(const MaterialApp(
   home: QuoteList(),
@@ -14,6 +15,10 @@ class QuoteList extends StatefulWidget {
 class _QuoteListState extends State<QuoteList> {
 
   //Where we create our data.
+  List<Quote> quotes = [
+      Quote(text: "Hello World", author: "Brian Kernighan"),
+      Quote(text: "To master new technology you have to play with it", author: "Jordan Peterson"),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +34,8 @@ class _QuoteListState extends State<QuoteList> {
       ),
 
       body: Column(
-        children: [
-
-        ],
+        //function is returning objects from the Quote class, needs the new notation because we are tapping into a property
+        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList(),
       ),
 
     );
