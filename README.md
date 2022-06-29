@@ -14,3 +14,11 @@ flutter run
 - creating separate class file
 - using constructors
 - learned to use '${variable_name.property_name}'
+- learned to pass functions as parameters
+
+## Features to add
+
+- user input
+- categories for the quotes, for example... programming, philosophy etc.
+- add feature
+- notification feature so randomized quotes can be sent to you screen every morning.

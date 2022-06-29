@@ -6,7 +6,9 @@ class QuoteCard extends StatelessWidget {
 //using a stateful widget inside a stateless context
 
 final Quote quote;
-const QuoteCard({Key? key, required this.quote}) : super(key: key);
+final Function() delete; //fixed some final function error caused by the new version of dart
+
+const QuoteCard({Key? key, required this.quote, required this.delete}) : super(key: key);
 
 //named parameter passed on line .24 received and being assigned to the final on line .57
 //line 58 is a constructor and named parameters now use required.
@@ -37,6 +39,14 @@ Widget build(BuildContext context) {
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(height: 8.0,),
+          TextButton.icon(onPressed: delete,
+              icon: const Icon(Icons.delete_outline),
+              label: const Text('Delete quote'),
+              style: TextButton.styleFrom(
+                      primary: const Color(0xFF042100),
+                      minimumSize: const Size(30, 16),
+              ),)
         ],
       ),
     ),
