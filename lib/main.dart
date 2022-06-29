@@ -20,7 +20,7 @@ class _QuoteListState extends State<QuoteList> {
       Quote(text: "Hello World.", author: "Brian Kernighan"),
       Quote(text: "To master new technology you have to play with it.", author: "Jordan Peterson"),
       Quote(text: "Good code is its own documentation", author: "Steve McConnell"),
-      Quote(text: "It’s not a bug — it’s an undocumented feature.", author: "Unknown")
+      Quote(text: "What did the Java code say to the C code? You’ve got no class.", author: "Unknown")
   ];
 
   @override
