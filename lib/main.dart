@@ -59,6 +59,7 @@ class _QuoteListState extends State<QuoteList> {
           style: TextStyle(
             color: Color(0xFF042100),
             fontWeight: FontWeight.bold,
+            fontFamily: ('fonts/SecularOne'),
           )
         ),
         centerTitle: true,
