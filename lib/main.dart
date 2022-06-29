@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() => runApp(const MaterialApp(
   home: QuoteList(),
@@ -18,38 +19,8 @@ class _QuoteListState extends State<QuoteList> {
   List<Quote> quotes = [
       Quote(text: "Hello World.", author: "Brian Kernighan"),
       Quote(text: "To master new technology you have to play with it.", author: "Jordan Peterson"),
+      Quote(text: "Good code is its own documentation", author: "Steve McConnell")
   ];
-
-  Widget quoteTemplate(quote){
-    return Card(
-      margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              quote.text,
-              style: const TextStyle(
-                fontSize: 16.0,
-                color: Color(0xFF042100),
-              ),
-            ),
-            const SizedBox(height: 10.0,),
-
-            Text(
-              quote.author,
-              style: const TextStyle(
-                fontSize: 12.0,
-                color: Color(0xFF042100),
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +38,8 @@ class _QuoteListState extends State<QuoteList> {
       ),
 
       body: Column(
-        //function is returning objects from the Quote class, needs the new notation because we are tapping into a property
-        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+        //This function has gone through many changes,
+        children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
       ),
 
       backgroundColor: const Color(0xFFE7EDDE),
@@ -76,7 +47,6 @@ class _QuoteListState extends State<QuoteList> {
     );
   }
 }
-
 
 
 
