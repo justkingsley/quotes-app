@@ -13,3 +13,4 @@ flutter run
 - expanding use of the children property
 - creating separate class file
 - using constructors
+- learned to use '${variable_name.property_name}'
